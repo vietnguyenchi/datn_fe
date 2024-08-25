@@ -1,16 +1,16 @@
 import { useRoutes } from 'react-router-dom';
 import CompanyLayout from './Layout/CompanyLayout';
+import useRoute from './hooks/useRoutes';
 
 function App() {
-	const routes = useRoutes([
-		{
-			path: '/company',
-			element: <CompanyLayout />,
-			children: [],
-		},
-	]);
+	const { companyRoutes, candidateRoutes } = useRoute();
 
-	return <>{routes}</>;
+	return (
+		<>
+			{companyRoutes}
+			{candidateRoutes}
+		</>
+	);
 }
 
 export default App;

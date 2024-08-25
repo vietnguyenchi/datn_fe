@@ -1,18 +1,18 @@
+import React from 'react';
+import Header from '../components/company/Header';
 import { Outlet } from 'react-router-dom';
 import Footer from '../components/company/Footer';
-import Header from '../components/company/Header';
 
-const CompanyLayout = () => {
+const CandidateLayout = () => {
 	return (
 		<>
 			<Header />
 			<div className="container max-w-85">
 				<Outlet />
-				<p>dafasdfsadfsd</p>
 			</div>
 			<Footer />
 		</>
 	);
 };
 
-export default CompanyLayout;
+export default CandidateLayout;
