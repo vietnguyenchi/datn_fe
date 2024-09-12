@@ -1,17 +1,15 @@
-import { Outlet } from "react-router-dom";
-import Footer from "../components/company/Footer";
-import Header from "../components/company/Header";
+import { Outlet } from 'react-router-dom';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const CompanyLayout = () => {
-  return (
-    <>
-      <Header />
-      <div>
-        <Outlet />
-      </div>
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<Outlet />
+			<Footer />
+		</>
+	);
 };
 
 export default CompanyLayout;
