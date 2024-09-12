@@ -1,15 +1,12 @@
 import { Outlet } from 'react-router-dom';
-import Footer from '../components/company/Footer';
-import Header from '../components/company/Header';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const CompanyLayout = () => {
 	return (
 		<>
 			<Header />
-			<div className="container max-w-85">
-				<Outlet />
-				<p>dafasdfsadfsd</p>
-			</div>
+			<Outlet />
 			<Footer />
 		</>
 	);

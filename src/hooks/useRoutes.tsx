@@ -1,13 +1,19 @@
 import { useRoutes as routes } from 'react-router-dom';
 import CompanyLayout from '../Layout/CompanyLayout';
 import CandidateLayout from '../Layout/CandidateLayout';
+import Homepage from '../pages/Homepage';
 
 const useRoutes = () => {
 	const companyRoutes = routes([
 		{
 			path: '/company',
 			element: <CompanyLayout />,
-			children: [],
+			children: [
+				{
+					path: '/company',
+					element: <Homepage />,
+				},
+			],
 		},
 	]);
 
